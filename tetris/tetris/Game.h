@@ -1,5 +1,8 @@
 #pragma once
 #include <Siv3D.hpp>
+#include "Main_process.h"
+
+class Process;
 
 class Game {
 public:
