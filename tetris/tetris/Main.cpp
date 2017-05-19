@@ -1,14 +1,14 @@
 ﻿
-# include <Siv3D.hpp>
+# include "Game.h"
 
 void Main()
 {
-	const Font font(30);
+	Game game;
 
-	while (System::Update())
-	{
-		font(L"ようこそ、Siv3D の世界へ！").draw();
+	Window::Resize(720, 1000);
 
-		Circle(Mouse::Pos(), 50).draw({ 255, 0, 0, 127 });
+	while (System::Update()){
+		game.update();
+		game.draw();
 	}
 }
