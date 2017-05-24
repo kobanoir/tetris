@@ -15,7 +15,7 @@ void Game::update() {
 		if (Input::KeySpace.clicked) {
 			state = State::RESULT;
 		}
-
+		process.process();
 		break;
 	case RESULT:
 		if (Input::KeySpace.clicked) {

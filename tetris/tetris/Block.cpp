@@ -1,4 +1,5 @@
 #include "Block.h"
+#include <random>
 
 Block::Block() {
 	make_mino();
@@ -40,4 +41,25 @@ void Block::make_mino() {
 	tletter[0][1] = 1;
 	tletter[1][1] = 1;
 	tletter[2][1] = 1;
+}
+
+int Block::get_mino() {
+	random_device rnd;
+	int i = rnd() % 7;
+	switch (i) {
+	case 0:
+		break;
+	case 1:
+		break;
+	case 2:
+		break;
+	case 3:
+		break;
+	case 4:
+		break;
+	case 5:
+		break;
+	case 6:
+		break;
+	}
 }

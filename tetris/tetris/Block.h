@@ -9,6 +9,8 @@ public:
 	
 	void make_mino();
 
+	int get_mino();
+
 private:
 	int tetris[4][4];
 	int square[2][2];

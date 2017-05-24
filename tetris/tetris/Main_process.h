@@ -8,6 +8,8 @@ class Map;
 
 class Process {
 public:
-
+	void process();
 private:
+	vector<vector<int>> next;
+	Block block;
 };

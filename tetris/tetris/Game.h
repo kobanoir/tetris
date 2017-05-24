@@ -20,4 +20,5 @@ public:
 
 private:
 	State state;
+	Process process;
 };
