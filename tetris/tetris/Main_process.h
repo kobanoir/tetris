@@ -10,6 +10,7 @@ class Process {
 public:
 	void process();
 private:
+	int *mino;
 	vector<vector<int>> next;
 	Block block;
 };

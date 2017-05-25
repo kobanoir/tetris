@@ -45,21 +45,121 @@ void Block::make_mino() {
 
 int Block::get_mino() {
 	random_device rnd;
-	int i = rnd() % 7;
-	switch (i) {
+	int mino = rnd() % 7;
+	int hoge;
+	switch (mino) {
 	case 0:
+		hoge = 0;
 		break;
 	case 1:
+		hoge = 1;
 		break;
 	case 2:
+		hoge = 2;
 		break;
 	case 3:
+		hoge = 3;
 		break;
 	case 4:
+		hoge = 4;
 		break;
 	case 5:
+		hoge = 5;
 		break;
 	case 6:
+		hoge = 6;
 		break;
 	}
+	return hoge;
+}
+
+int* Block::get_mino1(int i) {
+	int *line = 0;
+	switch (i) {
+	case 0:
+		*line = tetris[0][0];
+		break;
+	case 1:
+		*line = square[0][0];
+		break;
+	case 2:
+		*line = stairA[0][0];
+		break;
+	case 3:
+		*line = stairB[0][0];
+		break;
+	case 4:
+		*line = hookA[0][0];
+		break;
+	case 5:
+		*line = hookB[0][0];
+		break;
+	case 6:
+		*line = tletter[0][0];
+		break;
+	}
+	return line;
+}
+
+int* Block::get_mino2(int i) {
+	int *line = 0;
+	switch (i) {
+	case 0:
+		*line = tetris[1][0];
+		break;
+	case 1:
+		*line = square[1][0];
+		break;
+	case 2:
+		*line = stairA[1][0];
+		break;
+	case 3:
+		*line = stairB[1][0];
+		break;
+	case 4:
+		*line = hookA[1][0];
+		break;
+	case 5:
+		*line = hookB[1][0];
+		break;
+	case 6:
+		*line = tletter[1][0];
+		break;
+	}
+	return line;
+}
+
+int* Block::get_mino3(int i) {
+	int *line = 0;
+	switch (i) {
+	case 0:
+		*line = tetris[2][0];
+		break;
+	case 2:
+		*line = stairA[2][0];
+		break;
+	case 3:
+		*line = stairB[2][0];
+		break;
+	case 4:
+		*line = hookA[2][0];
+		break;
+	case 5:
+		*line = hookB[2][0];
+		break;
+	case 6:
+		*line = tletter[2][0];
+		break;
+	}
+	return line;
+}
+
+int* Block::get_mino4(int i) {
+	int *line = 0;
+	switch (i) {
+	case 0:
+		*line = tetris[3][0];
+		break;
+	}
+	return line;
 }
