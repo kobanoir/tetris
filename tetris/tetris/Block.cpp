@@ -7,10 +7,10 @@ Block::Block() {
 
 void Block::make_mino() {
 	//ñ_
-	tetris[2][0] = 1;
-	tetris[2][1] = 1;
+	tetris[0][2] = 1;
+	tetris[1][2] = 1;
 	tetris[2][2] = 1;
-	tetris[2][3] = 1;
+	tetris[3][2] = 1;
 	//éläpå`
 	square[0][0] = 1;
 	square[0][1] = 1;

@@ -17,9 +17,29 @@ void Map::map_draw() {
 void Map::next_draw(int **next,int hoge) {
 	for (int i = 0; i < hoge; i++) {
 		for (int j = 0; j < hoge; j++) {
-			if (next[i][j] == 1) {
+			if (next[j][i] == 1) {
 				Rect(590 + 20 * i, 100 + 20 * j, 20, 20).draw(Palette::Greenyellow);
 				Rect(590 + 20 * i, 100 + 20 * j, 20, 20).drawFrame(2, 0, Palette::Green);
+			}
+		}
+	}
+}
+
+void Map::draw_map(int **map) {
+	for (int i = 0;i < 10;i++) {
+		for (int j = 0;j < 20;j++) {
+			if (map[i][j] == 1) {
+				Rect(i * 50, j * 50, 50, 50).draw(Palette::Red);
+			}
+		}
+	}
+}
+
+void Map::draw_mino(vector<int*>ope, vector<int*>pos_x, vector<int*>pos_y) {
+	for (int i = 0;i < ope.size();i++) {
+		for (int j = 0;j < ope.size();j++) {
+			if (ope[j][i] == 1) {
+				Rect(pos_x[j][i] * 50, pos_y[j][i] * 50, 50, 50).draw(Palette::Red);
 			}
 		}
 	}
