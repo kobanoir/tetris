@@ -35,11 +35,11 @@ void Map::draw_map(int **map) {
 	}
 }
 
-void Map::draw_mino(vector<int*>ope, vector<int*>pos_x, vector<int*>pos_y) {
+void Map::draw_mino(vector<int*>ope, vector<int*>pos) {
 	for (int i = 0;i < ope.size();i++) {
 		for (int j = 0;j < ope.size();j++) {
-			if (ope[j][i] == 1) {
-				Rect(pos_x[j][i] * 50, pos_y[j][i] * 50, 50, 50).draw(Palette::Red);
+			if (ope[i][j] == 1) {
+				Rect(pos[i][j * 2] * 50, pos[i][j * 2 + 1] * 50, 50, 50).draw(Palette::Red);
 			}
 		}
 	}

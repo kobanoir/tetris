@@ -11,5 +11,5 @@ public:
 
 	void draw_map(int **map);
 
-	void draw_mino(vector<int*>ope, vector<int*>pos_x,vector<int*>pos_y);
+	void draw_mino(vector<int*>ope, vector<int*>pos);
 };

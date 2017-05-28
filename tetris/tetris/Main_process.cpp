@@ -95,14 +95,12 @@ void Process::move_next() {
 
 void Process::draw_mino() {
 	vector<int*> op;
-	vector<int*> pos_x;
-	vector<int*> pos_y;
+	vector<int*> pos;
 	for (int i = 0;i < ope.size();i++) {
 		op.push_back(&ope[i][0]);
-		pos_x.push_back(&ope_pos[i][0].first);
-		pos_y.push_back(&ope_pos[i][0].second);
+		pos.push_back(&ope_pos[i][0].first);
 	}
-	map.draw_mino(op,pos_x,pos_y);
+	map.draw_mino(op,pos);
 }
 
 void Process::draw_map() {
